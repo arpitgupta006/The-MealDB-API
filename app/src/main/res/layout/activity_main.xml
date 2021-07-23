@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Search"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="56dp"
+            android:padding="5dp"
+            android:id="@+id/buSearch"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_search_24" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/white"
+        app:indicatorColor="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:trackColor="@color/purple_700"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeal"
+        android:layout_width="match_parent"
+        android:layout_height="589dp" />
+
+
+</LinearLayout>
